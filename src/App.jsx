@@ -1,18 +1,19 @@
 import { useState } from 'react'
+import { BrowserRouter } from 'react-router-dom';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 import './styles/App.css'
+import Main from './components/Main';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>  
-      <h1>Puplanta</h1>
-      
-      <p className="read-the-docs">
-       website goes here
-      </p>
-    </>
+    <BrowserRouter>  
+      <Navigation/>
+      <Main/>
+      <Footer/>
+    </BrowserRouter>
   )
 }
 
